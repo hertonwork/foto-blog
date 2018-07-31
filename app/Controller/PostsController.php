@@ -30,11 +30,17 @@ App::uses('AppController', 'Controller');
  * @package		app.Controller
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
-class PostsController extends AppController 
+class PostsController extends AppController
 {
-    public $helpers = array('Html', 'Form');
+    public $helpers = [
+        'Html',
+        'Form',
+        'Awesome' => [
+            'option1' => 'value1'
+        ]
+    ];
 
     public function index() {
         $this->set('posts', $this->Post->find('all'));
-    } 
+    }
 }

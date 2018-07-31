@@ -23,7 +23,7 @@ App::uses('Debugger', 'Utility');
         <th>Id</th>
         <th>Title</th>
         <th>Created</th>
-    </tr> 
+    </tr>
 	<?php foreach ($posts as $post): ?>
     <tr>
         <td><?php echo $post['Post']['id']; ?></td>
@@ -36,7 +36,10 @@ array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?>
     <?php endforeach; ?>
     <?php unset($post); ?>
 </table>
-
+<pre>
+    SUP:
+    <?php echo $this->Awesome->makeEdit('hi','#'); ?>
+</pre>
 <?php
 if (Configure::read('debug') > 0):
 	Debugger::checkSecurityKeys();
