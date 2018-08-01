@@ -9,6 +9,7 @@
 /dist
 /tags
 *.mo
+/app/webroot/img/uploads/*
 
 # IDE and editor specific files #
 #################################
